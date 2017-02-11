@@ -214,12 +214,12 @@ var alki = {
 }
 
 // Call function to generate cookies
-// for Bellevue Square
+// for Alki
 
 alki.generateCookies();
 
 // Create <li> for
-// Bellevue Square elements on page
+// Alki elements on page
 
 var parent = document.getElementById('Alki');
 var child;

@@ -1,0 +1,35 @@
+@import url("../reset.css");
+
+em {
+  font-style: italic;
+}
+
+header {
+  background: #2b2a2a;
+  color: #fff;
+  text-align: center;
+  font-family: 'Open sans', sans-serif;
+  width: 100%;
+  border-bottom: 1px solid #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  padding: 50px 0;
+  font-size: 40px;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Open sans', sans-serif;
+}
+
+h2 {
+  background: #e1e4e3;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 28px;
+  border-bottom: 1px solid #b3afaf;
+  font-style: italic;
+  text-transform: lowercase;
+  font-weight: normal;
+  color: #545553;
+}
