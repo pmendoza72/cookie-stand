@@ -26,6 +26,7 @@ function Store(name, min, max, avgCookiesPerCustomer){
     var cookieTable = document.getElementById('cookieTable');
     var trElement = document.createElement('tr');
     var nameData = document.createElement('td');
+    var total = document.createElement('td');
     nameData.textContent = this.name;
     trElement.appendChild(nameData);
     cookieTable.appendChild(trElement);
@@ -35,8 +36,15 @@ function Store(name, min, max, avgCookiesPerCustomer){
       trElement.appendChild(nameData);
       cookieTable.appendChild(trElement);
     }
+    total = document.createElement('td');
+    total.textContent += this.cookiesPerHour[i];
+//    total += this.cookiesPerHour[i];
+    trElement.appendChild(nameData);
+    cookieTable.appendChild(trElement);
   }
 }
+
+
 
 // Creating a row for each store
 
@@ -56,6 +64,11 @@ storeStand.generateCookies();
 storeStand.renderAsRow();
 
 var storeStand = new Store('Bellevue Square', 24, 48, 3.3);
+console.log(storeStand);
+storeStand.generateCookies();
+storeStand.renderAsRow();
+
+var storeStand = new Store('Alki', 3, 24, 2.6);
 console.log(storeStand);
 storeStand.generateCookies();
 storeStand.renderAsRow();
