@@ -9,8 +9,10 @@ function Store(name, min, max, avgCookiesPerCustomer){
   this.customersPerHour = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
+
+  // Cookies per hour generator
+
   this.cookiesPerHour = [];
-  // cookies per hour generator:
   this.generateCookies = function() {
     for (var i = 0; i < 8; i++){
       this.cookiesPerHour[i] = Math.round(this.customersPerHour(this.min, this.max)*this.avgCookiesPerCustomer);
@@ -36,8 +38,24 @@ function Store(name, min, max, avgCookiesPerCustomer){
   }
 }
 
+// Creating a row for each store
 
-var stand = new Store('Pike Place',	17,	88,	5.2);
-console.log(stand);
-stand.generateCookies();
-stand.renderAsRow();
+var storeStand = new Store('Pike Place',	17,	88,	5.2);
+console.log(storeStand);
+storeStand.generateCookies();
+storeStand.renderAsRow();
+
+var storeStand = new Store('SeaTac Airport', 6, 24, 1.2);
+console.log(storeStand);
+storeStand.generateCookies();
+storeStand.renderAsRow();
+
+var storeStand = new Store('Southcenter',	11,	38,	1.9);
+console.log(storeStand);
+storeStand.generateCookies();
+storeStand.renderAsRow();
+
+var storeStand = new Store('Bellevue Square', 24, 48, 3.3);
+console.log(storeStand);
+storeStand.generateCookies();
+storeStand.renderAsRow();
