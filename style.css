@@ -69,6 +69,29 @@ ul>li {
   list-style: square;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border: 1px solid #ddd;
+}
+
+th {
+  padding: 8px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-bottom-width: 2px;
+}
+
 #page-wrap {
   width: 100%;
   margin: 0 auto;
