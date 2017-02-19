@@ -13,6 +13,34 @@
     <img src="images/salmon.png" width="220px" />
   </header>
   <main>
+
+
+    <fieldset>
+      <legend>Enter your data here</legend>
+      <form id="form" class="form-inline">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input class="form-control" type="text" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="min">Minimum Customers</label>
+          <input class="form-control" type="number" name="min" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="max">Maximum Customers</label>
+          <input class="form-control" type="number" name="max" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="avg">Average Cookies Sold</label>
+          <input class="form-control" type="number" name="avg" min="0" required>
+        </div>
+        <div class="form-group">
+          <input class="btn btn-primary" type="submit" value="Submit">
+        </div>
+      </form>
+    </fieldset>
+
+
     <table id="cookieTable">
       <thead>
         <tr>
@@ -28,8 +56,10 @@
           <th>Total</th>
         </tr>
       </thead>
-      <tr>
-      </tr>
+      <tbody>
+      </tbody>
+      <tfoot>
+      </tfoot>
     </table>
   </main>
   <script src="app.js"></script>
