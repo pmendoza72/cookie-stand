@@ -1,3 +1,18 @@
+'use strict';
+
+var allItems = [];
+var grandTotals = {
+  min: 0,
+  max: 0,
+  total: 0,
+};
+
+var form = document.getElementById('form');
+
+var table = document.getElementById('table');
+var tbody = document.getElementById('table-body');
+var tfoot = document.getElementsByTagName('tfoot')[0];
+
 // Building a constructor function
 // from previous literal
 
@@ -14,6 +29,9 @@ function Store(name, min, max, avgCookiesPerCustomer){
   // Cookies per hour generator
 
   this.cookiesPerHour = [];
+
+// This generates the total cookies per row
+
   this.generateCookies = function() {
     for (var i = 0; i < 8; i++){
       this.cookiesPerHour[i] = Math.round(this.customersPerHour(this.min, this.max)*this.avgCookiesPerCustomer);
@@ -73,3 +91,10 @@ var storeStand = new Store('Alki', 3, 24, 2.6);
 console.log(storeStand);
 storeStand.generateCookies();
 storeStand.renderAsRow();
+
+
+form.addEventListener('submit', handleFormSubmit);
+
+updateObjects();
+makeAllItemRows();
+makeTotalRow();
