@@ -2,12 +2,12 @@
 // from previous literal
 
 
-function Store(name, min, max, avgCookiesPerCustomer){
+function Store(name, min, max, avg){
   this.name= name;
   this.min = min;
   this.max = max;
   this.total = 0;
-  this.avgCookiesPerCustomer = avgCookiesPerCustomer;
+  this.avg = avg;
   this.customersPerHour = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
@@ -18,7 +18,7 @@ function Store(name, min, max, avgCookiesPerCustomer){
 
   this.generateCookies = function() {
     for (var i = 0; i < 8; i++){
-      this.cookiesPerHour[i] = Math.round(this.customersPerHour(this.min, this.max)*this.avgCookiesPerCustomer);
+      this.cookiesPerHour[i] = Math.round(this.customersPerHour(this.min, this.max)*this.avg);
       this.total += this.cookiesPerHour[i];
     }
   }
@@ -57,15 +57,15 @@ function handleFormSubmit(event) {
   var name = event.target.name.value;
   var min = parseFloat(event.target.min.value);
   var max = parseFloat(event.target.max.value);
-  var avgCookiesPerCustomer = parseFloat(event.target.avgCookiesPerCustomer.value);
+  var avg = parseFloat(event.target.avg.value);
 
-  var store = new Store(name, min, max, avgCookiesPerCustomer);
+  var store = new Store(name, min, max, avg);
   store.renderAsRow();
 
   event.target.name.value = null;
   event.target.min.value = null;
   event.target.max.value = null;
-  event.target.avgCookiesPerCustomer.value = null;
+  event.target.avg.value = null;
 }
 
 
