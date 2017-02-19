@@ -10,33 +10,46 @@
 <body id="page-wrap">
   <header>
     <h1>Pat's Salmon Cookies</h1>
-    <img src="images/salmon.png" width="220px" />
+    <!-- <img src="images/salmon.png" width="220px" /> -->
   </header>
   <main>
 
 
     <fieldset>
       <legend>Enter your data here</legend>
+
       <form id="form" class="form-inline">
+
+
         <div class="form-group">
-          <label for="name">Name</label>
-          <input class="form-control" type="text" name="name" required>
+          <label class="col-md-4 control-label" for="name"></label>
+          <input placeholder="New Location" class="form-control input-md" type="text" name="name" required>
         </div>
+
         <div class="form-group">
-          <label for="min">Minimum Customers</label>
-          <input class="form-control" type="number" name="min" min="0" required>
+          <label class="col-md-4 control-label" for="min"></label>
+          <input placeholder="Minimum Customers" class="form-control input-md" type="number" name="min" min="0" required>
         </div>
+
+
+
         <div class="form-group">
-          <label for="max">Maximum Customers</label>
-          <input class="form-control" type="number" name="max" min="0" required>
+          <label class="col-md-4 control-label" for="max"></label>
+          <input placeholder="Maximum Customers" class="form-control input-md" type="number" name="max" min="0" required>
+
         </div>
+
+
+
         <div class="form-group">
-          <label for="avg">Average Cookies Sold</label>
-          <input class="form-control" type="number" name="avg" min="0" required>
+          <label class="col-md-4 control-label" for="avg"></label>
+          <input placeholder="Average Cookies Sold" class="form-control input-md" type="number" name="avg" min="0" required>
         </div>
+
         <div class="form-group">
-          <input class="btn btn-primary" type="submit" value="Submit">
+          <input class="btn btn-primary" type="submit" value="SUBMIT">
         </div>
+
       </form>
     </fieldset>
 
@@ -44,7 +57,7 @@
     <table id="cookieTable">
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Location</th>
           <th>10am</th>
           <th>11am</th>
           <th>12pm</th>
