@@ -4,7 +4,7 @@
 
 
 header {
-  background: #FF91A4;
+  /*background: rgba(255,145,164,0.5);*/
   color: #fff;
   text-align: center;
   font-family: 'Sansita', sans-serif;
@@ -14,6 +14,7 @@ header {
   text-transform: uppercase;
   display: block;
   padding: 30px 0;
+  height: 300px;
 }
 header > img {
   padding: 15px 0 0 0;
@@ -28,6 +29,9 @@ header h1 {
 body {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4) ), url('images/salmon-background.jpg');
+  /*background-image: url('images/salmon-background.jpg');*/
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -56,7 +60,7 @@ h5 {
 }
 
 main {
-  margin: 30px 15px;
+  margin: 30px 45px;
 }
 
 ul {
@@ -74,8 +78,11 @@ table {
   border-spacing: 0;
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
+  border: 3px solid #b6b1b1;
+}
+
+thead tr {
+    border-bottom: 3px solid #b6b1b1;
 }
 
 tr >th {
@@ -84,6 +91,11 @@ tr >th {
 
 tr:nth-of-type(odd) {
     background-color: #f9f9f9;
+}
+
+tr:nth-of-type(even) {
+    background-color: #a2a0a0;
+    color: #fff;
 }
 
 td {
@@ -111,21 +123,42 @@ fieldset {
 }
 
 legend {
-  display: flex;
-  padding: 5px;
+  padding: 5px 0;
+  font-size: 30px;
   font-weight: bold;
+  color: #fff;
   /*border: solid;*/
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.form-control {
+  font-size: 16px;
 }
 
 .form-group {
     padding: 10px;
 }
 
-input {
-  margin-left: 5px;
+form .form-group {
+    padding-left: 0;
 }
+
+.btn-primary {
+  border-color: #fff;
+}
+
+/*input {
+  margin-left: 5px;
+}*/
 
 #page-wrap {
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 200px;
 }
